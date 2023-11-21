@@ -14,6 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: make
-      run: g++ -std=c++17 -L/usr/lib/x86_64-linux-gnu -pthread -fopenmp duratskiy_openmp.cpp -o program.out
+      run: g++ -std=c++17 -L/usr/lib/x86_64-linux-gnu -pthread -fopenmp Par_Prog_2.cpp -o program.out
     - name: execute
       run: ./program.out
