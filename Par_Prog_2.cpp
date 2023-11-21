@@ -73,7 +73,7 @@ int main() {
     // Инициализация матриц A и B
     int** A, ** B, ** result;
 
-    int N = 1000; // Размер матрицы
+    int N = 10; // Размер матрицы
 
     // Выделение памяти
     A = new int* [N];
@@ -123,10 +123,10 @@ int main() {
     delete[] result;
 
     cout << "TESTS" << endl;
-    test1(10000);
-    test1(50000);
-    test1(100000);
-    test1(200000);
+    test1(100);
+    test1(500);
+    test1(1000);
+    test1(2000);
 
     return 0;
 }
