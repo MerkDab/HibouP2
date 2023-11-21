@@ -47,7 +47,7 @@ void test1(int N) {
             if (j == 0)
                 omp_set_schedule(omp_sched_static, 1);
             if (j == 1)
-                omp_set_schedule(omp_sched_dinamic, 1);
+                omp_set_schedule(omp_sched_dynamic, 1);
             if (j == 2)
                 omp_set_schedule(omp_sched_guided, 1);
             start_time = omp_get_wtime();
@@ -102,7 +102,7 @@ int main() {
             if(j == 0)
                 omp_set_schedule(omp_sched_static, 1); 
             if(j == 1)
-                omp_set_schedule(omp_sched_dinamic, 1);
+                omp_set_schedule(omp_sched_dynamic, 1);
             if(j == 2)
                 omp_set_schedule(omp_sched_guided, 1);
             start_time = omp_get_wtime();
