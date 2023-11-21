@@ -1,0 +1,19 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: make
+      run: g++ -std=c++17 -L/usr/lib/x86_64-linux-gnu -pthread -fopenmp duratskiy_openmp.cpp -o program.out
+    - name: execute
+      run: ./program.out
